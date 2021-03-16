@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Description
+title: Perception and Control for Autonomous Navigation in Crowded, Dynamic Environments 
 permalink: /
 description: 
 order: a
