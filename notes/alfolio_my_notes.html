@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>alfolio_my_notes</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <link rel="stylesheet" href="/Users/pdelgosha/css/jemdoc_medical.css" />
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<nav id="TOC" role="doc-toc">
+<ul>
+<li><a href="#al-folio-jekyll---my-notes">al-folio Jekyll - My notes</a></li>
+<li><a href="#how-tos">How-to’s</a>
+<ul>
+<li><a href="#how-to-add-a-new-page-to-the-navigator">How to add a new page to the navigator</a></li>
+<li><a href="#how-to-change-the-order-of-pages-in-the-navigation-bar">How to change the order of pages in the navigation bar</a></li>
+<li><a href="#change-the-theme-color">Change the theme color</a></li>
+<li><a href="#change-the-color-of-the-address-block">Change the color of the address block</a></li>
+<li><a href="#change-page-title-sizes">Change page title sizes</a></li>
+<li><a href="#how-to-distinguish-between-conference-and-journal-papers">How to distinguish between conference and journal papers:</a></li>
+<li><a href="#in-publications-how-to-remove-the-year">In publications, how to remove the year?</a></li>
+<li><a href="#in-publications-how-to-decrease-the-left-space-for-each-paper-left-for-its-tag">In publications, how to decrease the left space for each paper left for its tag</a></li>
+<li><a href="#negar-did-not-like-her-first-name-to-be-bold">Negar did not like her first name to be bold</a></li>
+<li><a href="#changing-arxiv-and-html-button-in-bibliography-size">Changing arxiv and html button in bibliography size</a></li>
+<li><a href="#chante-social-icons-styles">Chante social icons styles</a></li>
+<li><a href="#access-the-webpage-from-other-computers-in-the-network">access the webpage from other computers in the network</a></li>
+<li><a href="#text-with-color">Text with color</a></li>
+<li><a href="#increasing-the-width-of-date-column-in-news">Increasing the width of date column in news</a></li>
+<li><a href="#exlude-this-notes-folder-from-being-included-in-_sites">Exlude this notes folder from being included in <code>_sites</code></a></li>
+</ul></li>
+</ul>
+</nav>
+<h1 id="al-folio-jekyll---my-notes">al-folio Jekyll - My notes</h1>
+<input type="text" value="/Users/pdelgosha/Documents/Negar/Webpage/Jekyll/al-folio/My_notes/alfolio_my_notes.md" id="myInput" readonly> <button onclick="myFunction()">Copy Source Location</button>
+<script>
+function myFunction() {
+       var copyText = document.getElementById("myInput");
+       copyText.select();
+       document.execCommand("copy");
+ } 
+</script>
+<h1 id="how-tos">How-to’s</h1>
+<h2 id="how-to-add-a-new-page-to-the-navigator">How to add a new page to the navigator</h2>
+<p>Just add a file to <code>_pages_</code>, for instance <code>test.md</code>, which has the following header:</p>
+<pre><code>---
+layout: page
+permalink: /test/
+title: test
+description: 
+nav: true
+order: a
+---</code></pre>
+<p>Note that <code>order</code> is a key that I have added and will be explained later. <code>title</code> is the text that shows both in the navigation bar as well as when you go to the page.</p>
+<h2 id="how-to-change-the-order-of-pages-in-the-navigation-bar">How to change the order of pages in the navigation bar</h2>
+<p>This is why I have added the order key. This is how it works: If you go to <code>_includes/header.html_</code>, this is the template for the header which includes the navigation bar. Search for the comment <code>&lt;!-- Navbar Toogle --&gt;</code> and you will find below it three blocks: it starts with <code>!&lt;-- About --&gt;</code>, and then there are <code>!&lt;-- Other pages --&gt;</code> and <code>!&lt;-- Blog --&gt;</code>. I brought Blog to the end, but apart from about and blog, the rest of the pages are sorted based on this: the first line in the other pages block looks like this (in the version I have modified): <code>{% assign sorted_pages = site.pages | sort: "order" %}</code>, this says that sort the remaining pages based on the <code>order</code> key, which is precisely what I have added to the key set of each page (you should manually add this key to all pages). Then, with this order key you can set the order.</p>
+<h2 id="change-the-theme-color">Change the theme color</h2>
+<p>Look at the file <code>_sass/_variables.scss</code>, below the comment line which reads <code>set theme color</code>, I modified it to <code>$theme-color:         $green-color-dark;</code>, where you can replace the color with anything else.</p>
+<h2 id="change-the-color-of-the-address-block">Change the color of the address block</h2>
+<p>Go to <code>_sass/_base.scss</code>, in the <code>.profile</code> section, in the <code>.address</code> block, you will find a <code>font-family</code> line, just change that.</p>
+<h2 id="change-page-title-sizes">Change page title sizes</h2>
+<p>By inspecting elements in chrome, and studying <code>_layouts/page.html</code>, I realized that the class is called <code>post-title</code>, which was not defined in <code>_sass/_base.scss</code>. So I realized that I can define it myself like this in <code>_sass/_base.scss</code>:</p>
+<pre><code>h1.post-title {
+    font-size: 2rem;
+}
+
+h2.post-title{
+    font-size: 1.5rem;
+}</code></pre>
+<p><font color='red'> Update: </font> For markdown, if you use <code>##</code>, it gets h2 but general h2 not <code>h2.post-title</code>, so I also had to add this:</p>
+<pre><code>h2{
+    font-size:1.5rem;
+}</code></pre>
+<h2 id="how-to-distinguish-between-conference-and-journal-papers">How to distinguish between conference and journal papers:</h2>
+<p>My <code>_pages/publications.md</code> looks like this:</p>
+<pre><code>&lt;h2 class=&quot;post-title&quot;&gt; journal papers &lt;/h2&gt; 
+
+&lt;div class=&quot;publications&quot;&gt;
+
+{% for y in page.years %}
+  &lt;!--- &lt;h2 class=&quot;year&quot;&gt;{{y}}&lt;/h2&gt; ---&gt;
+  {% bibliography -f papers -q @*[year={{y}},type=journal]*   %}
+{% endfor %}
+
+&lt;/div&gt;
+
+
+&lt;h2 class=&quot;post-title&quot;&gt; conference papers &lt;/h2&gt; 
+
+&lt;div class=&quot;publications&quot;&gt;
+
+{% for y in page.years %}
+  &lt;!--- &lt;h2 class=&quot;year&quot;&gt;{{y}}&lt;/h2&gt; ---&gt;
+  {% bibliography -f papers -q @*[year={{y}},type=conference]*   %}
+{% endfor %}
+
+&lt;/div&gt;
+</code></pre>
+<p>Note that for this, in the bib file that you create, for each bib item I have a type=journal or type=conference key based on which the above querying takes place. You need to do the same thing for conference. Next, I discuss how to remove sorting based on the year.</p>
+<h2 id="in-publications-how-to-remove-the-year">In publications, how to remove the year?</h2>
+<p>In <code>_pages/publicagtions.md</code>, it is originally like this:</p>
+<pre><code>  &lt;h2 class=&quot;year&quot;&gt;{{y}}&lt;/h2&gt;
+  {% bibliography -f papers -q @*[year={{y}},type=conference]*   %}
+</code></pre>
+<p>simply remove the h2 header which creates the year</p>
+<h2 id="in-publications-how-to-decrease-the-left-space-for-each-paper-left-for-its-tag">In publications, how to decrease the left space for each paper left for its tag</h2>
+<p>In <code>_layouts/bib.html</code>, after you find <code>&lt;div class="col-sm-2 abbr"&gt;</code>. the <code>col-sm-2</code> is a standard class and the 2 in it means that it is a column with width 2 (don’t know the unit). I simply changes it to <code>col-sm-1</code>. Also, in the line <code>&lt;div id="{{entry.key}}" class="col-sm-8"&gt;</code>, I changed <code>col-sm-8</code> to <code>col-sm-10</code> to make the titles wider.</p>
+<h2 id="negar-did-not-like-her-first-name-to-be-bold">Negar did not like her first name to be bold</h2>
+<p>In <code>_layouts/about.html</code>, the header looks like this:</p>
+<pre><code>    &lt;h1 class=&quot;post-title&quot;&gt;
+     {% if site.title == blank %}{{ site.title }}{% else %}&lt;span class=&quot;font-weight-bold&quot;&gt;{{ site.first_name }}&lt;/span&gt; {{ site.middle_name }}  {{ site.last_name }}{% endif %}
+    &lt;/h1&gt;</code></pre>
+<p>I simply removed <code>font-weight-bold</code>, and changed it to this:</p>
+<pre><code>    &lt;h1 class=&quot;post-title&quot;&gt;
+     {% if site.title == blank %}{{ site.title }}{% else %}&lt;span&gt;{{ site.first_name }}&lt;/span&gt; {{ site.middle_name }}  {{ site.last_name }}{% endif %}
+    &lt;/h1&gt;</code></pre>
+<h2 id="changing-arxiv-and-html-button-in-bibliography-size">Changing arxiv and html button in bibliography size</h2>
+<p>In <code>_scss/_base.scss</code> file, in <code>ol.bibliography.links.a.btn</code>, line 363, I changed the <code>padding</code>, <code>font_size</code>, and <code>border_raduis</code> like this:</p>
+<pre><code>      .links {
+          a.btn {
+              // I changed here for html and arxiv buttons
+          color: $text-color;
+          border: 1px solid $text-color;
+          padding-left: 0.4rem;
+          padding-right: 0.4rem;
+          padding-top: 0.25rem;
+          padding-bottom: 0.25rem;
+          font-size: 8pt;
+          color: $theme-color;
+          border-color: $theme-color;
+          border-radius: 8pt;
+          &amp;:hover {
+            color: $theme-color;
+            border-color: $theme-color;
+          }
+        }
+      }</code></pre>
+<p>Note that I have also changed the original color (without hover) so that we have more green elements.</p>
+<h2 id="chante-social-icons-styles">Chante social icons styles</h2>
+<p>In the file <code>_sass/_base.scss</code>, search for <code>.contact-icon</code>, to change the size, you can change <code>font-size</code>, the behavior after going over the icon is inside the hover section. You can change the color before hovering as well in the line above that. <font color='red'> CAUTION </font> There are multiple contact-icon sections, you should edit the one with a <code>Social (bottom)</code> comment above it.</p>
+<h2 id="access-the-webpage-from-other-computers-in-the-network">access the webpage from other computers in the network</h2>
+<p>Learnt from <a href="https://zarino.co.uk/post/jekyll-local-network/">here</a>, the magic is that initially to run Jekyll from command line, instead of saying <code>bundle exec jekyll serve</code>, use <code>bundle exec jekyll serve --host 0.0.0.0</code>.</p>
+<h2 id="text-with-color">Text with color</h2>
+<p>To mark a text with lets say the theme color, I have the following part in the <code>sass/_base.scss_</code> file:</p>
+<pre><code>.keyword {
+    color: $theme-color;
+}</code></pre>
+<p>then, whenever you want to have a colored text, simply do this in html or markdown:</p>
+<pre><code>&lt;span class=&quot;keyword&quot;&gt; test &lt;/span&gt;</code></pre>
+<h2 id="increasing-the-width-of-date-column-in-news">Increasing the width of date column in news</h2>
+<p>I simply added this to <code>_sass/_base.scss</code>:</p>
+<pre><code>.news table th {
+    min-width: 130px;
+}</code></pre>
+<h2 id="exlude-this-notes-folder-from-being-included-in-_sites">Exlude this notes folder from being included in <code>_sites</code></h2>
+<p>In <code>_config.yml</code>, I have <code>exclude: [vendor, notes]</code>.</p>
+</body>
+</html>
