@@ -24,5 +24,25 @@ Mobile robots are increasingly being used in complex, dynamic, and human-filled 
 
 The aim of this workshop is to bring together researchers from each of these domains to foster discussions about best practices for their integration in order to yield robust navigation systems that function in the most challenging environments. At the workshop attendees will have the opportunity to learn about new results from established researchers in both academia and industry, to hear about preliminary results from young researchers, and to actively engage in open discussions with one another. We hope this workshop will help the community discover new opportunities for collaborations and effective directions of future research.
 
-Relevant topics include: perception, multi-target tracking, trajectory prediction, AV planning, multi-robot planning, game theoretic planning
+<h2> Topics of interest include (but are not limited to): </h2>
 
+- Perception (multi-modal sensor fusion, object classification and segmentation, etc.) 
+- Multi-target tracking (tracking algorithms, trajectory prediction, etc.) 
+- Planning and control in dynamic settings (autonomous vehicles, multi-robot planning, game-theoretic methods, etc.) 
+
+
+<h2> Submission: </h2>
+
+We invite short papers (max 4 pages, excluding citations) in standard RSS paper format, though workshop submissions need not be anonymized. We welcome submissions within the broad areas of perception, tracking, and multi-agent planning. All accepted papers will be introduced in lightning talks, presented as posters, and featured on the workshop website.
+ 
+Papers may be submitted in PDF format via email to the address: <a href="mailto:dynamic.perception.control.rss21@gmail.com">dynamic.perception.control.rss21@gmail.com</a>.
+
+We encourage submissions from young researchers, women, minorities, and members of other underrepresented groups.
+
+
+<h2> Important Dates: </h2>
+
+
+June 20th, 2021 - Deadline for paper submissions <br>
+July 1, 2021 - Notification of acceptance <br>
+July 14, 2021 - Workshop (virtual) <br>
