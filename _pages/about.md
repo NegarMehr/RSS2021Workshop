@@ -45,4 +45,4 @@ We encourage submissions from young researchers, women, minorities, and members 
 
 June 20, 2021 - Deadline for paper submissions <br>
 July 1, 2021 - Notification of acceptance <br>
-July 14, 2021 - Workshop (virtual) <br>
+July 14, 2021 - Workshop (virtual) <br> 
