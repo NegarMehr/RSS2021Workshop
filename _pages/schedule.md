@@ -7,20 +7,15 @@ nav: true
 order: c
 ---
 
-
+The tentative schedule is as follows (all in PT):
 
 | Time | |Event | 
 |:------:|------|:----:|
-| 9:00 - 10:10     |  |Perception, Tracking, and Prediction 1 |
-| 10:10 - 10:20 | | Break | 
-| 10:20 - 11:30 | | Planning and Control 1 |
-| 11:30 - 12:00 | |Breakout Sessions |
-| 12:00 - 12:30 | |Group Discussion |
-| 12:30 - 1:50 | |Lunch and Poster Session |
-| 1:50 - 2:00 | |Break | 
-| 2:00 - 3:10 | |Perception, Tracking, and Prediction 2 |
-| 3:10 - 3:20 | |Break | 
-| 3:20 - 4:30 | |Planning and Control 2 |
-| 4:30 - 4:40 | |Break |
-| 4:40 - 5:30 | |Panel Discussion |
-
+| 10 - 10:05 | | Welcome |
+| 10:05 - 10:25 | | Panel with pre-recorded speakers |
+| 10:25 - 10:30 | |  Break |
+| 10:30 - 11:45 | |  Live talks |
+| 11:45 - 12:05 | |  Panel with live speakers |
+| 12:05 - 12:10 | |  Break |
+| 12:10 - 12:30 | | Lightning talks |
+| 12:30 - 1 | | Poster session |
