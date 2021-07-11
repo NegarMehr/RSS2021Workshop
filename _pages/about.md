@@ -18,6 +18,7 @@ selected_papers: false # includes a list of papers marked as "selected={true}"
 social: false  # includes social icons at the bottom of the page
 ---
 
+<img class="img-fluid rounded z-depth-1" src="{{ '/assets/img/front.jpeg' | relative_url }}" alt="" title="front"/>
 
 
 Mobile robots are increasingly being used in complex, dynamic, and human-filled environments, such as providing contact-free services during the COVID-19 pandemic, customer service in supermarkets, last-mile package delivery, and transporting both goods and people on roadways. The main challenge in all of these scenarios lies in safely navigating around people, who are inherently difficult to model, and with other robots, who they may not be able to communicate with. Achieving reliable autonomous navigation in these settings involves the integration of a myriad of disciplines, from multi-modal perception to detect and classify individual objects, multi-target tracking to track these objects over time, trajectory prediction to enumerate possible future actions of each object, and (multi-robot) planning and control algorithms that can account for these possible actions and reason about possible reactive coupling among multiple agents.
@@ -47,3 +48,6 @@ June 20, 2021 - Deadline for paper submissions <br>
 July 1, 2021 - Notification of acceptance <br>
 July 14, 2021 - Workshop (virtual) <br> 
 
+<h2> Recordings: </h2>
+
+Recordings are available on our <a href="https://youtu.be/4xsQghRro3Y">YouTube playlist</a>. 
