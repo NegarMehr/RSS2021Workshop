@@ -50,5 +50,5 @@ July 14, 2021 - Workshop (virtual) <br>
 
 <h2> Recordings: </h2>
 
-Recordings are available on our <a href="https://youtu.be/4xsQghRro3Y">YouTube playlist</a>. 
+Recordings are available on our <a href="https://www.youtube.com/playlist?list=PLouWbAcP4zIvKaADSMjMRzpHBPjdRuApC">YouTube playlist</a>. 
 
