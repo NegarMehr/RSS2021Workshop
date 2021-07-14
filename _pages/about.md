@@ -52,3 +52,6 @@ July 14, 2021 - Workshop (virtual) <br>
 
 Recordings are available on our <a href="https://www.youtube.com/playlist?list=PLouWbAcP4zIvKaADSMjMRzpHBPjdRuApC">YouTube playlist</a>. 
 
+<h2> Zoom: </h2>
+
+<a href="https://temple.zoom.us/j/98700534885?pwd=TmtsaVVRblRacEEyRWhGNWdrUUJzdz09">Here</a> is a link to the workshop.
