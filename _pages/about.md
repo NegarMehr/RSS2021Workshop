@@ -55,3 +55,5 @@ Recordings are available on our <a href="https://www.youtube.com/playlist?list=P
 <h2> Zoom: </h2>
 
 <a href="https://temple.zoom.us/j/98700534885?pwd=TmtsaVVRblRacEEyRWhGNWdrUUJzdz09">Here</a> is a link to the workshop.
+
+
